@@ -75,7 +75,7 @@ def ingest_data(
 def main():
     pg_user = 'root'
     pg_pass = 'root'
-    pg_host = 'localhost'
+    pg_host = 'pgdatabase'
     pg_port = '5432'
     pg_db = 'ny_taxi'
     year = 2021
@@ -97,7 +97,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
