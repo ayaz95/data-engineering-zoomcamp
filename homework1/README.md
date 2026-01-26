@@ -1,5 +1,3 @@
-# data-engineering-zoomcamp
-
 # Homework 1 
 Data Engineering Zoomcamp - Homework 1
 
@@ -56,3 +54,4 @@ Database: ny_taxi
 ✅ Data persists across restarts
 ✅ pgAdmin ready at localhost:8085
 ✅ Ready for SQL analysis/joins
+
