@@ -1,0 +1,49 @@
+-- Question 3. For the trips in November 2025, how many trips had a trip_distance of less than or equal to 1 mile?
+
+SELECT COUNT(*)
+FROM public.green_taxi_data
+WHERE trip_distance <= 1
+AND lpep_pickup_datetime >= '2025-11-01'
+AND lpep_dropoff_datetime < '2025-12-01'
+
+-- Question 4. Which was the pick up day with the longest trip distance? Only consider trips with trip_distance less than 100 miles.
+
+SELECT lpep_pickup_datetime, trip_distance
+FROM public.green_taxi_data
+WHERE lpep_pickup_datetime >= '2025-11-01'
+AND lpep_dropoff_datetime < '2025-12-01'
+AND trip_distance < 100
+ORDER BY trip_distance DESC
+LIMIT 1
+
+
+-- Question 5. Which was the pickup zone with the largest total_amount (sum of all trips) on November 18th, 2025? 
+
+SELECT zones."Zone", SUM(total_amount) AS total_amount
+FROM public.green_taxi_data AS taxi 
+JOIN public.taxi_zones AS zones
+ON taxi."PULocationID" = zones."LocationID"
+WHERE taxi.lpep_pickup_datetime >= '2025-11-18'
+  AND taxi.lpep_pickup_datetime <  '2025-11-19'
+GROUP BY zones."Zone"
+ORDER BY SUM(total_amount) DESC
+LIMIT 1 
+
+-- Question 6. For the passengers picked up in the zone named "East Harlem North" in November 2025, which was the drop off zone that had the largest tip? 
+
+SELECT -- pu_zones."Zone" AS Pickup_Zones, 
+do_zones."Zone" AS Dropoff_Zones, 
+-- lpep_pickup_datetime,
+-- lpep_dropoff_datetime
+MAX(tip_amount)
+FROM public.green_taxi_data AS taxi 
+JOIN public.taxi_zones AS pu_zones
+ON taxi."PULocationID" = pu_zones."LocationID"
+JOIN public.taxi_zones AS do_zones
+ON taxi."DOLocationID" = do_zones."LocationID"
+WHERE pu_zones."Zone" = 'East Harlem North'
+AND lpep_pickup_datetime >= '2025-11-01'
+AND lpep_dropoff_datetime < '2025-12-01'
+GROUP BY do_zones."Zone"
+ORDER BY MAX(tip_amount) DESC
+LIMIT 1
