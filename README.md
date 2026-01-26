@@ -17,7 +17,8 @@ This pipeline ingests NYC Green Taxi trip data and Taxi Zone lookup into Postgre
 
 - taxi_zones - Zone lookup (LocationID → Borough/Zone names)
 
-🏗️ Tech Stack
+# 🏗️ Tech Stack
+
 📦 Python 3.13 + uv (dependency management)
 🐘 PostgreSQL 18
 🐳 Docker + Docker Compose
@@ -25,7 +26,8 @@ This pipeline ingests NYC Green Taxi trip data and Taxi Zone lookup into Postgre
 🖥️  pgAdmin (GUI database browser)
 
 
-🚀 Quick Start
+# 🚀 Quick Start
+
 1. Clone & Navigate --> cd "homework 1"
 
 2. Start Pipeline (One Command) --> docker compose up --build
@@ -48,7 +50,7 @@ Database: ny_taxi
 └── .python-version    # Python 3.13.10
 
 
-🎉 Success Metrics
+# 🎉 Success Metrics
 ✅ green_taxi_data: ~12,345 rows loaded
 ✅ taxi_zones: 265 rows loaded
 ✅ Data persists across restarts
