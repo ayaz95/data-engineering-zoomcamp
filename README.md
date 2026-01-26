@@ -51,7 +51,7 @@ Database: ny_taxi
 
 
 # 🎉 Success Metrics
-✅ green_taxi_data: ~12,345 rows loaded
+✅ green_taxi_data: 46912 rows loaded
 ✅ taxi_zones: 265 rows loaded
 ✅ Data persists across restarts
 ✅ pgAdmin ready at localhost:8085
