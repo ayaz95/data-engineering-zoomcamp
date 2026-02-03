@@ -1,6 +1,6 @@
 # NYC Taxi Data Pipeline: Kestra + Docker + GCP
 
-** 🎯 Overview **
+### 🎯 Overview ###
 This project demonstrates an ELT pipeline that:
 
 - Extracts taxi trip data from external APIs
