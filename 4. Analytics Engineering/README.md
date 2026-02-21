@@ -43,30 +43,30 @@ Update dbt_project.yml with your project name and schema settings
 
 ## Running the project 
 
-# Install dependencies
+#### Install dependencies
 dbt deps
 
-# Load seed files into BigQuery
+#### Load seed files into BigQuery
 dbt seed
 
-# Run all models
+#### Run all models
 dbt run
 
-# Run tests
+#### Run tests
 dbt test
 
-# Run everything together
+#### Run everything together
 dbt build
 
-### Running Specific Models
+#### Running Specific Models
 
-# Run only staging models
+#### Run only staging models
 dbt run --select staging
 
-# Run a specific model and all its dependencies
+#### Run a specific model and all its dependencies
 dbt run --select +fct_trips
 
-# Run a specific model and all downstream models
+#### Run a specific model and all downstream models
 dbt run --select fct_trips+
 
 ### Source Data
