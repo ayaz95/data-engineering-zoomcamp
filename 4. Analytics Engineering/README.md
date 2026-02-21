@@ -69,13 +69,12 @@ dbt run --select +fct_trips
 #### - Run a specific model and all downstream models
 dbt run --select fct_trips+
 
-### Source Data
+## Source Data
 The raw data is sourced from the NYC Taxi & Limousine Commission and loaded into BigQuery:
 
-TableDescription
-GreenTaxi_TripData ----> Green taxi trip records
-YellowTaxi_TripData ----> Yellow taxi trip records
+Table Description
 
+<img width="402" height="127" alt="image" src="https://github.com/user-attachments/assets/36838387-b793-43f2-86dd-e25422426c99" />
 
 ## Learn More
 dbt Documentation - https://docs.getdbt.com/
