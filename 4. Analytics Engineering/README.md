@@ -18,27 +18,30 @@ The project follows a layered transformation approach:
 
 <img width="481" height="207" alt="image" src="https://github.com/user-attachments/assets/4c59ae83-8651-43f7-a992-60e2307214b4" />
 
-### Models
+## Models
 
 1. Staging
+   
 stg_green_tripdata — Casts and renames columns from raw Green Taxi data. Filters out null vendor records.
 stg_yellow_tripdata — Casts and renames columns from raw Yellow Taxi data. Filters out null vendor records.
 
 2. Intermediate
+
 int_trips_unioned — Unions Green and Yellow taxi trips into a single dataset. Adds service_type column ('Green' or 'Yellow') and generates a unique trip_id using a surrogate key.
 
 3. Marts
+
 dim_zones — Dimension table built from the taxi_zone_lookup seed, containing borough, zone, and service zone for each location ID.
 fct_trips — Core fact table joining trips with pickup and dropoff zone dimensions. Includes trip duration in minutes.
 monthly_revenue_per_locations — Reporting model aggregating monthly revenue, trip counts, and averages by pickup zone and service type.
 
-### Configuration
+## Configuration
 
 Set up your BigQuery connection in dbt Cloud under Account Settings → Projects → Connection
 Ensure your development dataset is configured under Profile Settings → Credentials
 Update dbt_project.yml with your project name and schema settings
 
-### Running the project 
+## Running the project 
 
 # Install dependencies
 dbt deps
