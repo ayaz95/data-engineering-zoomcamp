@@ -11,24 +11,7 @@ Git — version control
 
 ### Project Structure 
 
-my_new_project/
-├── models/
-│   ├── staging/
-│   │   ├── stg_green_tripdata.sql       # Cleaned Green Taxi data
-│   │   ├── stg_yellow_tripdata.sql      # Cleaned Yellow Taxi data
-│   │   └── sources.yml                  # Source definitions
-│   ├── intermediate/
-│   │   └── int_trips_unioned.sql        # Union of Green + Yellow trips
-│   └── marts/
-│       ├── dim_zones.sql                # Dimension table for taxi zones
-│       ├── fct_trips.sql                # Core fact table for all trips
-│       └── reporting/
-│           └── monthly_revenue_per_locations.sql  # Monthly revenue report
-├── seeds/
-│   ├── taxi_zone_lookup.csv             # NYC taxi zone reference data
-│   └── payment_type_lookup.csv          # Payment type reference data
-├── dbt_project.yml                      # Project configuration
-└── packages.yml                         # dbt package dependencies
+<img width="571" height="380" alt="image" src="https://github.com/user-attachments/assets/1303d2b0-9020-4061-aeb4-a798aa979b4f" />
 
 ### Data Architecture
 The project follows a layered transformation approach:
