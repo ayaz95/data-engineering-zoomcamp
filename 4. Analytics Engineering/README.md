@@ -13,6 +13,39 @@ Git — version control
 
 <img width="571" height="380" alt="image" src="https://github.com/user-attachments/assets/1303d2b0-9020-4061-aeb4-a798aa979b4f" />
 
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="450" viewBox="0 0 640 450">
+  <rect width="640" height="450" fill="#1a1a2e" rx="6"/>
+  <style>
+    text {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 13.2px;
+      fill: #e0e0e0;
+    }
+    .comment { fill: #6a9955; }
+  </style>
+
+  <text x="16" y="28">my_new_project/</text>
+  <text x="16" y="50">├── models/</text>
+  <text x="16" y="72">│   ├── staging/</text>
+  <text x="16" y="94">│   │   ├── stg_green_tripdata.sql<tspan class="comment">       # Cleaned Green Taxi data</tspan></text>
+  <text x="16" y="116">│   │   ├── stg_yellow_tripdata.sql<tspan class="comment">      # Cleaned Yellow Taxi data</tspan></text>
+  <text x="16" y="138">│   │   └── sources.yml<tspan class="comment">                  # Source definitions</tspan></text>
+  <text x="16" y="160">│   ├── intermediate/</text>
+  <text x="16" y="182">│   │   ├── int_trips_unioned.sql<tspan class="comment">        # Union of Green + Yellow trips</tspan></text>
+  <text x="16" y="204">│   │   └── int_trips.sql<tspan class="comment">                # Trips with surrogate key &amp; enrichment</tspan></text>
+  <text x="16" y="226">│   └── marts/</text>
+  <text x="16" y="248">│       ├── schema.yml<tspan class="comment">                   # Model contracts and documentation</tspan></text>
+  <text x="16" y="270">│       ├── dim_zones.sql<tspan class="comment">                # Dimension table for taxi zones</tspan></text>
+  <text x="16" y="292">│       ├── fct_trips.sql<tspan class="comment">                # Core fact table for all trips</tspan></text>
+  <text x="16" y="314">│       └── reporting/</text>
+  <text x="16" y="336">│           └── monthly_revenue_per_locations.sql<tspan class="comment">  # Monthly revenue report</tspan></text>
+  <text x="16" y="358">├── seeds/</text>
+  <text x="16" y="380">│   ├── taxi_zone_lookup.csv<tspan class="comment">             # NYC taxi zone reference data</tspan></text>
+  <text x="16" y="402">│   └── payment_type_lookup.csv<tspan class="comment">          # Payment type reference data</tspan></text>
+  <text x="16" y="424">├── dbt_project.yml<tspan class="comment">                       # Project configuration</tspan></text>
+  <text x="16" y="446">└── packages.yml<tspan class="comment">                          # dbt package dependencies</tspan></text>
+</svg>
+
 ### Data Architecture
 The project follows a layered transformation approach:
 
