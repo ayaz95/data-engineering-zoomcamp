@@ -1,19 +1,19 @@
-## Analytics Engineering with dbt & BigQuery
+# Analytics Engineering with dbt & BigQuery
 
-### Overview
+## Overview
 This project is part of the Data Engineering Zoomcamp and covers Analytics Engineering using dbt (data build tool) with Google BigQuery as the data warehouse. It transforms raw NYC Taxi trip data into clean, analytics-ready models following the Medallion Architecture pattern.
 
-### Tech Stack
+## Tech Stack
 dbt Cloud — transformation and orchestration
 Google BigQuery — data warehouse
 NYC Taxi Dataset — Green and Yellow taxi trip data
 Git — version control
 
-### Project Structure 
+## Project Structure 
 
 <img width="571" height="380" alt="image" src="https://github.com/user-attachments/assets/1303d2b0-9020-4061-aeb4-a798aa979b4f" />
 
-### Data Architecture
+## Data Architecture
 The project follows a layered transformation approach:
 
 <img width="481" height="207" alt="image" src="https://github.com/user-attachments/assets/4c59ae83-8651-43f7-a992-60e2307214b4" />
